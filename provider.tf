@@ -1,7 +1,7 @@
 #provider
 provider "aws" {
 
-region = "us-east-1"
+region = var.aws_region
 }
 
 
@@ -18,6 +18,7 @@ terraform {
   backend "s3" {
     bucket = "mek-terra-backend-state-file"
     key    = "terraform.tfstate"
+#region within backed block should be hard coded
     region = "us-east-1"
     dynamodb_table = "terraform-state"
   }
