@@ -19,12 +19,16 @@ terraform {
 provider "aws" {
   alias   = "main"
   region  = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 # profile = "tera"
 }
 
 provider "aws" {
   alias   = "dev"
   region  = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
  # profile = "tera"
 
   assume_role {
@@ -35,6 +39,8 @@ provider "aws" {
 provider "aws" {
   alias   = "awstest"
   region  = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
   #profile = "tera"
 
   assume_role {
