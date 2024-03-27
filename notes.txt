@@ -1,0 +1,43 @@
+#Install Terraform
+https://medium.com/@rajkanchole1/steps-to-install-terraform-on-amazon-linux-15e6eb8763f2
+
+#AMI Locator
+https://cloud-images.ubuntu.com/locator/ec2/
+
+
+#Terraform sample docs
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+
+#youtube tutorial
+https://www.youtube.com/watch?v=2ruztbokul4&list=PLjl2dJMjkDjnJgAUxw17bUpJE-KpxT3Xa&index=9
+
+
+#terraform docs / life cycle
+https://developer.hashicorp.com/terraform/language/resources/syntax
+
+
+#commands 
+terraform destroy -target=<resource_type>.<resource_name> -target=<path_to_specific_file>
+	terraform destroy -target=aws_s3_bucket.terraform-bucket1 -target=main.tf	
+	terraform apply -target=aws_s3_bucket.terraform-bucket1 -target=main.tf
+
+#in order to manage state-file remotly we can use S3 bucket and dynamo Db table 
+S3 will store the Terraform state file and DynamoDB will manage the state lock to prevent concurrent state operations. 
+see the backedn block within provider.tf file for configuration
+
+
+#to import instance 
+terraform import aws_instance.myvm <instance ID> (make sure to change myvm to the actual resource name
+
+#Git commands 
+
+git status
+git add -A
+git status
+git commit -m "initial commit"
+git status
+git log
+
+#state file tutorial
+
+
