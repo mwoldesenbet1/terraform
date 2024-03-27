@@ -19,13 +19,13 @@ terraform {
 provider "aws" {
   alias   = "main"
   region  = var.aws_region
-  profile = "tera"
+# profile = "tera"
 }
 
 provider "aws" {
   alias   = "dev"
   region  = var.aws_region
-  profile = "tera"
+ # profile = "tera"
 
   assume_role {
     role_arn = "arn:aws:iam::471112561699:role/OrganizationAccountAccessRole"
@@ -35,7 +35,7 @@ provider "aws" {
 provider "aws" {
   alias   = "awstest"
   region  = var.aws_region
-  profile = "tera"
+  #profile = "tera"
 
   assume_role {
     role_arn = "arn:aws:iam::628789204422:role/switch-role"
