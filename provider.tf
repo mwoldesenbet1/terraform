@@ -10,7 +10,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-    #  version = "~> 5.0"
+    # version = "~> 5.0"
      version = "5.42.0"
     }
   }
@@ -49,8 +49,8 @@ provider "aws" {
   region  = var.aws_region
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
-  #profile = "tera"
-
+  #profile = "tera" #remove profile
+ 
   assume_role {
     role_arn = "arn:aws:iam::628789204422:role/switch-role"
   }
