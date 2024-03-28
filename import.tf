@@ -20,7 +20,7 @@ resource "aws_instance" "aws-test-ec2" {
  instance_type = "t2.micro"
 
  tags = {
-   "Name": "aws-test-ec2"
+   "Name": "awstest-ec2"
  }
 /*
    lifecycle {
