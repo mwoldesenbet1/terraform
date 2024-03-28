@@ -17,7 +17,7 @@ resource "aws_instance" "main-account-ec2" {
 resource "aws_instance" "aws-test-ec2" {
  provider = aws.awstest
  ami           = "ami-06e46074ae430fba6"
- instance_type = "t2.micro"
+ instance_type = "t2.small"
 
  tags = {
    "Name": "awstest-ec2"
