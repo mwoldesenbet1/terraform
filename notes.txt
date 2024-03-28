@@ -27,7 +27,8 @@ see the backedn block within provider.tf file for configuration
 
 
 #to import instance 
-terraform import aws_instance.myvm <instance ID> (make sure to change myvm to the actual resource name
+https://spacelift.io/blog/importing-exisiting-infrastructure-into-terraform
+terraform import aws_instance.myvm <instance ID> (make sure to change myvm to the actual resource name)
 
 #Git commands 
 
@@ -38,6 +39,9 @@ git commit -m "initial commit"
 git status
 git log
 
-#state file tutorial
+#statefile tutorial 
+https://www.youtube.com/watch?v=UDBVCzg2IRo
+
+https://www.youtube.com/watch?v=BIVsDKwqlEM
 
 

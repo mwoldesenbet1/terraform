@@ -1,4 +1,4 @@
-resource "aws_instance" "imported-instance2" {
+resource "aws_instance" "imported-instance" {
  ami           = "ami-0c101f26f147fa7fd"
  instance_type = "t2.micro"
 
@@ -16,7 +16,7 @@ resource "aws_instance" "imported-instance2" {
 }
 
 resource "aws_instance" "imported-instance1" {
- #provider = aws.awstest
+ provider = aws.awstest
  ami           = "ami-06e46074ae430fba6"
  instance_type = "t2.micro"
 
