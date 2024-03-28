@@ -18,7 +18,7 @@ resource "aws_instance" "imported-instance" {
 resource "aws_instance" "imported-instance1" {
  provider = aws.awstest
  ami           = "ami-06e46074ae430fba6"
- instance_type = "t2.micro"
+ instance_type = "t2.small"
 
  tags = {
    "Name1": "import1"
