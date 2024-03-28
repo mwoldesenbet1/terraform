@@ -3,8 +3,7 @@ resource "aws_instance" "main-account-ec2" {
  instance_type = "t2.micro"
 
  tags = {
-   "Name1": "import"
-   "Name": "import-test"
+   "Name": "main-account-ec2"
  }
 /*
    lifecycle {
@@ -21,8 +20,7 @@ resource "aws_instance" "aws-test-ec2" {
  instance_type = "t2.micro"
 
  tags = {
-   "Name1": "import1"
-   "Name": "import-test2"
+   "Name": "aws-test-ec2"
  }
 /*
    lifecycle {
